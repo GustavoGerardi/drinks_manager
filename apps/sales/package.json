@@ -1,0 +1,19 @@
+{
+  "name": "@drinks/sales",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3003",
+    "build": "next build",
+    "start": "next start --port 3003",
+    "lint": "next lint",
+    "typecheck": "tsc --project tsconfig.json"
+  },
+  "dependencies": {
+    "@drinks/types": "file:../../packages/types",
+    "@drinks/ui": "file:../../packages/ui",
+    "next": "^15.5.3",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  }
+}
