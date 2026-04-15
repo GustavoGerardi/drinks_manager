@@ -1,0 +1,164 @@
+:root {
+  --bg: #effbf8;
+  --surface: #ffffff;
+  --text: #0d2e2b;
+  --muted: #496764;
+  --line: rgba(13, 46, 43, 0.1);
+  --accent: #00a6a6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(0, 166, 166, 0.16), transparent 28%),
+    linear-gradient(180deg, #f9fffe 0%, var(--bg) 100%);
+  font-family: "Gill Sans", "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.domain-page {
+  width: min(1080px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 42px 0 72px;
+}
+
+.domain-hero,
+.panel {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 20px 44px rgba(20, 82, 79, 0.08);
+}
+
+.domain-hero {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.domain-hero h1 {
+  margin: 10px 0 12px;
+  max-width: 12ch;
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  line-height: 0.95;
+}
+
+.domain-hero p,
+.section-heading p,
+.stat-card small,
+.restock-card span,
+.restock-card small {
+  color: var(--muted);
+}
+
+.back-link {
+  display: inline-flex;
+  width: fit-content;
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+}
+
+.eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #117f7f;
+}
+
+.panel {
+  margin-bottom: 24px;
+}
+
+.section-heading {
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  margin: 8px 0;
+  font-size: 2rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.stat-card,
+.restock-card {
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: 20px;
+}
+
+.stat-card span,
+.stat-card small {
+  display: block;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 1.8rem;
+  margin: 8px 0;
+}
+
+.restock-list {
+  display: grid;
+  gap: 14px;
+}
+
+.restock-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.restock-card strong,
+.restock-card span,
+.restock-meta span,
+.restock-meta small {
+  display: block;
+}
+
+.restock-meta {
+  text-align: right;
+}
+
+@media (max-width: 720px) {
+  .domain-page {
+    width: min(100% - 20px, 1080px);
+    padding-top: 20px;
+  }
+
+  .domain-hero,
+  .panel {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .restock-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .restock-meta {
+    text-align: left;
+  }
+}
